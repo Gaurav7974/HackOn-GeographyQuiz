@@ -8,9 +8,9 @@ function QuizPage() {
 
   // Difficulty images (Ensure they are in "public/images/")
   const difficultyImages = {
-    easy: "/images/easy.png",
-    medium: "/images/medium.png",
-    hard: "/images/hard.png",
+    easy: "../../../public/easy.jfif",
+    medium: "../../../public/medium.jfif",
+    hard: "../../../public/hard.jfif",
   };
 
   return (

@@ -1,17 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 function QuizPage() {
   const [numQuestions, setNumQuestions] = useState(5);
   const [difficulty, setDifficulty] = useState("easy");
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Difficulty images (Ensure they are in "public/images/")
+  const difficultyImages = {
+    easy: "/images/easy.png",
+    medium: "/images/medium.png",
+    hard: "/images/hard.png",
+  };
 
   return (
     <div
       style={{
-        width: "100vw", // ✅ Full width
-        minHeight: "100vh", // ✅ Full height
+        width: "100vw", // Full width
+        minHeight: "100vh", // Full height
         background: "#1a1a1a",
         color: "white",
-        display: "flex", // ✅ Center content
+        display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
@@ -24,13 +33,7 @@ function QuizPage() {
         value={numQuestions}
         onChange={(e) => setNumQuestions(Number(e.target.value))}
         min="1"
-        style={{
-          padding: "10px",
-          fontSize: "18px",
-          margin: "10px",
-          borderRadius: "5px",
-          textAlign: "center",
-        }}
+        style={{ padding: "10px", fontSize: "18px", margin: "10px", borderRadius: "5px", textAlign: "center" }}
       />
 
       <h2 style={{ marginTop: "20px" }}>SELECT YOUR DIFFICULTY</h2>
@@ -44,18 +47,27 @@ function QuizPage() {
               borderRadius: "10px",
               cursor: "pointer",
               transition: "0.3s",
-              minWidth: "120px",
+              minWidth: "140px",
               textAlign: "center",
+              background: "#2a2a2a",
             }}
             onClick={() => setDifficulty(level)}
             onMouseOver={(e) => (e.target.style.borderColor = "#00ff00")}
             onMouseOut={(e) => (e.target.style.borderColor = difficulty === level ? "#00ff00" : "#fff")}
           >
+            {/* Difficulty Image */}
+            <img
+              src={difficultyImages[level]}
+              alt={`${level} difficulty`}
+              style={{ width: "80px", height: "80px", marginBottom: "10px" }}
+            />
+            {/* Difficulty Text */}
             <h3 style={{ textTransform: "capitalize", margin: 0 }}>{level}</h3>
           </div>
         ))}
       </div>
 
+      {/* Start Quiz Button - Navigates to /quiz */}
       <button
         style={{
           marginTop: "30px",
@@ -70,6 +82,7 @@ function QuizPage() {
         }}
         onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
         onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+        onClick={() => navigate("/Questions", { state: { numQuestions } })} 
       >
         Start Quiz
       </button>

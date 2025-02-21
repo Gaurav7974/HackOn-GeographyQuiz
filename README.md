@@ -68,10 +68,12 @@ Start the Application:
 
 # Run the frontend
 cd HackOn-GeographyQuiz
+
 npm start
 
 # Run the backend
 cd HackOn-GeographyQuiz/geo_quiz/backend
+
 node server.js
 
 Access the Game:

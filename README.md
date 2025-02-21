@@ -75,7 +75,7 @@ cd HackOn-GeographyQuiz/geo_quiz/backend
 node server.js
 
 Access the Game:
-Open your browser and visit: http://localhost:3000
+Open your browser and visit: http://localhost:5173
 
 🚀 How to Play
 

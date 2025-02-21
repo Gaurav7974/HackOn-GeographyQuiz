@@ -62,7 +62,7 @@ function AnswerOptions({ options, correctAnswer, selectedAnswer, onAnswerClick }
                   : "lightgray"
                 : "white",
             color: selectedAnswer !== null ? "white" : "black",
-            border: "1px solid black",
+            border: "2px solid black",
           }}
           dangerouslySetInnerHTML={{ __html: option }}
         />

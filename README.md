@@ -58,10 +58,12 @@ Install Dependencies:
 
 # Install frontend packages
 cd client
+
 npm install
 
 # Install backend packages
 cd HackOn-GeographyQuiz/geo_quiz/backend
+
 npm install
 
 Start the Application:

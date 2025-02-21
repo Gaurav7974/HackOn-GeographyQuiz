@@ -8,6 +8,7 @@ Select number of questions.
 Choose difficulty (Easy, Medium, Hard).
 View score and correct answers after the quiz.
 Option to return to the home page.
+created a backend for storing all this score of user and according to then we are ranking them
 🔄 In Progress
 Multiplayer Mode:
 Real-time competitive and collaborative quiz challenges.

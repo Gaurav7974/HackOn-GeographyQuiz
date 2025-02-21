@@ -67,7 +67,7 @@ cd HackOn-GeographyQuiz/geo_quiz/backend
 npm install
 
 
-backend .env file content
+#backend .env file content
 
 PORT = 5000
 MONGO_URI = mongodb+srv://kirangoje1:rpE4Jyo5gSlC8mtb@cluster0.xl5bk.mongodb.net/geo-app-db?retryWrites=true&w=majority&appName=Cluster0
